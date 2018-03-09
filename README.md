@@ -9,11 +9,6 @@ This tutorial is under construction!
 What you need to do
 -------------------
 
-First, install the following applications:
-- [.NET Core SDK](https://www.microsoft.com/net/download/core)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
-
 Considering that you know a little about .Net Core, open the 'Visual Studio Code' and create a new mvc project.
 
 Open the file 'appsettings.json' and put yours configurations like the example below:
