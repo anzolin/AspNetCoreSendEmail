@@ -1,5 +1,5 @@
-# Send Email using ASP.NET Core
-A simple example of a send email project using ASP.NET Core
+# Sending Email using ASP.NET Core
+A simple example of a sending email project using ASP.NET Core.
 
 ```
 This tutorial is under construction!
@@ -35,6 +35,14 @@ Open the file 'appsettings.json' and put yours configurations like the example b
   }
 }
 ```
+
+Configure this file using the data in the table below, with me worked with Gmail and Hotmail:
+
+| Server Name  | SMTP Address | Port  | SSL |
+| ------------- | ------------- | ------------- | ------------- |
+| Gmail | smtp.gmail.com | 587 | Yes |
+| Hotmail | smtp.live.com | 587 | Yes |
+
 
 Create a directory called 'Code' in the root folder of your project and in this folder create a class file called 'EmailSettings.cs' with the following content:
 
@@ -176,6 +184,48 @@ Register email sender service in 'startup.cs', so that it can be injected in con
             services.AddMvc();
         }
 ...
+```
+
+Inject email sender service in controller constructor and then invoke SendEmailAsync() method of it:
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using SendEmail.Models;
+using SendEmail.Services;
+
+namespace SendEmail.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly IEmailSender _emailSender; // Add this
+
+        public HomeController(IEmailSender emailSender) // Add this
+        {
+            _emailSender = emailSender;
+        }
+
+        public async Task TestAction() // Add this
+        {
+           await _emailSender.SendEmailAsync("name@domain.com", "This is a test", $"Enter email body here");
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
+
 ```
 
 
