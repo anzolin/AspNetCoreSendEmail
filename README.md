@@ -36,7 +36,7 @@ Open the file 'appsettings.json' and put yours configurations like the example b
 }
 ```
 
-Configure this file using the data in the table below, with me worked with Gmail and Hotmail:
+Configure this file using the data in the table below (or other server), Gmail and Hotmail worked with me:
 
 | Server Name  | SMTP Address | Port  | SSL |
 | ------------- | ------------- | ------------- | ------------- |
