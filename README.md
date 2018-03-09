@@ -68,7 +68,7 @@ Register class in 'startup.cs':
 ...
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings")); // Add this
 
             services.AddMvc();
         }
@@ -176,7 +176,7 @@ Register email sender service in 'startup.cs', so that it can be injected in con
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IEmailSender, EmailSender>(); // Add this
 
             services.AddMvc();
         }
