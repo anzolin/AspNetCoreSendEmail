@@ -1,11 +1,10 @@
-using SendEmail.Code;
 using Microsoft.Extensions.Options;
+using SendEmail.Code;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace SendEmail.Services
 {
