@@ -23,7 +23,7 @@ Open the file 'appsettings.json' and put yours configurations like the example b
   },
   "EmailSettings": {
     "FromName": "Your name",
-    "FromAddress": "you@gmail.com",
+    "FromAddress": "you@domain.com",
     "ToEmail": "",
     "CcEmail": "",
     "BccEmail": "",
@@ -71,7 +71,7 @@ Register class in 'startup.cs':
 ...
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings")); // Add this
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings")); // Add this line
 
             services.AddMvc();
         }
@@ -179,7 +179,7 @@ Register email sender service in 'startup.cs', so that it can be injected in con
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-            services.AddTransient<IEmailSender, EmailSender>(); // Add this
+            services.AddTransient<IEmailSender, EmailSender>(); // Add this line
 
             services.AddMvc();
         }
@@ -209,9 +209,10 @@ namespace SendEmail.Controllers
             _emailSender = emailSender;
         }
 
-        public async Task TestAction() // Add this
+        // // Add this method
+        public async Task TestAction()
         {
-           await _emailSender.SendEmailAsync("name@domain.com", "This is a test", $"Enter email body here");
+           await _emailSender.SendEmailAsync("your_friend@domain.com", "This is the subject", $"This is the message.");
         }
 
         public IActionResult Index()
