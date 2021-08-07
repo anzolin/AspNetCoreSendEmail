@@ -1,3 +1,21 @@
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<br />
+
+
 # Sending Email using ASP.NET Core
 A simple example of a sending email project using ASP.NET Core.
 
@@ -252,3 +270,18 @@ Want to help me keep creating open source projects, make a donation:
 Thank you!
 
 
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/anzolin/AspNetCoreSendEmail.svg?style=for-the-badge
+[contributors-url]: https://github.com/anzolin/AspNetCoreSendEmail/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/anzolin/AspNetCoreSendEmail.svg?style=for-the-badge
+[forks-url]: https://github.com/anzolin/AspNetCoreSendEmail/network/members
+[stars-shield]: https://img.shields.io/github/stars/anzolin/AspNetCoreSendEmail.svg?style=for-the-badge
+[stars-url]: https://github.com/anzolin/AspNetCoreSendEmail/stargazers
+[issues-shield]: https://img.shields.io/github/issues/anzolin/AspNetCoreSendEmail.svg?style=for-the-badge
+[issues-url]: https://github.com/anzolin/AspNetCoreSendEmail/issues
+[license-shield]: https://img.shields.io/github/license/anzolin/AspNetCoreSendEmailsvg?style=for-the-badge
+[license-url]: https://github.com/anzolin/AspNetCoreSendEmail/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/diego-anzolin/
